@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './styles.css';
+import styles from './PlansCard.css';
 
 export default class PlansCard extends Component {
   render() {
     return (
-      <div className="plans-card-cover"></div>
+      <div className={styles.plans}>vvvv</div>
     );
   }
 }

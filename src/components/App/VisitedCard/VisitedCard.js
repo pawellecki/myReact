@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './styles.css';
+import styles from './VisitedCard.css';
 
 export default class VisitedCard extends Component {
   render() {
     return (
-      <div className="visited-card-cover"></div>
+      <div className={styles.visited}>dd</div>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './styles.css';
+// import styles from './App.css';
 import PlansCard from './PlansCard/PlansCard';
 import VisitedCard from './VisitedCard/VisitedCard'
 

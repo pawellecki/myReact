@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import './ChooseAlbum.css';
+import React, { Component } from 'react';
+import './CreateList.css';
 
-export default class ChooseAlbum extends Component {
+export default class CreateList extends Component {
 
     constructor(props) {
         super(props);
@@ -13,7 +13,6 @@ export default class ChooseAlbum extends Component {
         console.log(this);
         console.log(this.newListName.value);
         const listId = this.newListName.value;
-        // this.context.router.push(`/list/${listId}`);
         this.props.history.push(`/list/${listId}`);
     }
 

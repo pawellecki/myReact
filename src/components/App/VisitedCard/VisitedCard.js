@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './VisitedCard.css';
+import './styles.css';
 
 export default class VisitedCard extends Component {
   render() {

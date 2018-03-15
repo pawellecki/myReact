@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './PlansCard.css';
+import './styles.css';
 
 export default class PlansCard extends Component {
   render() {

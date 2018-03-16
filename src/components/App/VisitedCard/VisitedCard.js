@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import CSSModules from 'react-css-modules';
 import styles from './VisitedCard.css';
 
-export default class VisitedCard extends Component {
+class VisitedCard extends Component {
   render() {
     return (
-      <div className={styles.visited}>dd</div>
+      <div styleName='visited'>dd</div>
     );
   }
 }
+
+export default CSSModules(VisitedCard, styles);

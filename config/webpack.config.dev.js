@@ -158,16 +158,12 @@ module.exports = {
           // in development "style" loader enables hot editing of CSS.
           {
             test: /\.css$/,
-              loaders: [
-                  'style?sourceMap',
-                  'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]'
-              ],
             use: [
               require.resolve('style-loader'),
               {
                 loader: require.resolve('css-loader'),
                 options: {
-                  importLoaders: 1,
+                  importLoaders: 1
                 },
               },
               {

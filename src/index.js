@@ -12,7 +12,7 @@ const Root = () => {
  		<Router>
  			<div className="route-container">
 	 			<Route exact path="/" component={ChooseAlbum} />
-	 			<Route path="/album/:albumId" component={App} />
+	 			<Route path="/list/:listId" component={App} />
 	 		</div>	
  		</Router>
  	)

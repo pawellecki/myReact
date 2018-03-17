@@ -1,5 +1,7 @@
-.visited {
+.cover-done {
 	width: 300px;
-	height: 200px;
-	background: green;
+	height: 800px;
+	background: yellow;
+	float: left;
+	margin: 0 20px;
 }

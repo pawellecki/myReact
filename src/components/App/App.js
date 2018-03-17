@@ -5,13 +5,33 @@ import InProgressColumn from './InProgressColumn/InProgressColumn';
 import DoneColumn from './DoneColumn/DoneColumn';
 
 export default class App extends Component {
-    render() {
-        return (
-            <div className="plecy">
-                <ToDoColumn />
-                <InProgressColumn />
-                <DoneColumn />
-            </div>
-        );
-    }
+	constructor() {
+		super();
+		this.addTask = this.addTask.bind(this);
+		this.state = {
+			tasks: {
+
+			},
+			fisz: {
+
+			}
+		}
+	}
+
+	addTask(task) {
+		const tasks = {...this.state.tasks};
+		const timeKey = Date.now();
+		tasks[`task-${timeKey}`] = task;
+		this.setState({ tasks })
+	}
+
+	render() {
+		return (
+			<div className="appCover">
+				<ToDoColumn addTask={this.addTask}/>
+				<InProgressColumn />
+				<DoneColumn />
+			</div>
+		);
+	}
 }

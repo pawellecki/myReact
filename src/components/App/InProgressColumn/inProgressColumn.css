@@ -1,5 +1,14 @@
-.visited {
+.cover-in-pro {
 	width: 300px;
-	height: 200px;
-	background: green;
+	height: 800px;
+	background: yellow;
+	float: left;
+	margin: 0 20px;
+}
+.coverIpro {
+	width: 300px;
+	height: 800px;
+	background: red;
+	float: left;
+	margin: 0 20px;
 }

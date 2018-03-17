@@ -1,4 +1,10 @@
-.plecy {
-    padding: 33px;
-    background: blue;
+.appCover {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    border-top: 3px solid blue;
 }

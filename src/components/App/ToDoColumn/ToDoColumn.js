@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
-import styles from './ToDo.css';
+import styles from './toDoColumn.css';
+import AddTaskForm from './AddTaskForm/AddTaskForm';
+import Task from '../Task/Task';
 
-export default class ToDo extends Component {
+export default class ToDoColumn extends Component {
   render() {
     return (
-      <div className="plans">vvvvd</div>
+      <div className="cover-to-do">
+      	do zrobieniaa
+      	<AddTaskForm addTask={this.props.addTask}/>
+		<Task />
+      </div>
+
     );
   }
 }

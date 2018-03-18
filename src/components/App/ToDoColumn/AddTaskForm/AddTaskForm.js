@@ -10,8 +10,6 @@ export default class AddTaskForm extends Component {
 			status: this.status.value
 		}
 		this.props.addTask(newTask);
-    console.log(newTask);
-    console.log('hehe');
 		this.taskForm.reset();
 	}
 

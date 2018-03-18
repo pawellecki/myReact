@@ -6,10 +6,12 @@ export default class AddTaskForm extends Component {
 		event.preventDefault();
 		const newTask = {
 			title: this.title.value,
-			title: this.description.value,
-			title: this.status.value
+			description: this.description.value,
+			status: this.status.value
 		}
 		this.props.addTask(newTask);
+    console.log(newTask);
+    console.log('hehe');
 		this.taskForm.reset();
 	}
 

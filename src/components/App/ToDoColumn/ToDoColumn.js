@@ -8,10 +8,16 @@ export default class ToDoColumn extends Component {
     return (
       <div className="cover-to-do">
       	do zrobieniaa
-      	<AddTaskForm addTask={this.props.addTask}/>
-		<Task />
+      	<AddTaskForm addTask={this.props.addTask} />
+      	<ul className="tasksUl">
+             {/*<h2>{this.props.newTasks.status}</h2>*/}
+  {/*      	{*/}
+      {/*          Object*/}
+   {/*           .keys(this.state.newTasksList)*/}
+  {/*            .map(key => <Task key={key} />)*/}
+          {/*}*/}
+      	</ul>
       </div>
-
     );
   }
 }

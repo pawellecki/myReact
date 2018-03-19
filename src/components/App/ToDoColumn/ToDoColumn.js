@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './toDoColumn.css';
 import AddTaskForm from './AddTaskForm/AddTaskForm';
-import Task from '../Task/Task';
+// import Task from '../Task/Task';
 
 export default class ToDoColumn extends Component {
   render() {

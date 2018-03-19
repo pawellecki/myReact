@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&amp;subset=latin-ext');
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -29,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
-  font-family: sans-serif;
+  font-family: 'Nunito', cursive;
 }
 ol, ul {
   list-style: none;
@@ -46,3 +48,4 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+

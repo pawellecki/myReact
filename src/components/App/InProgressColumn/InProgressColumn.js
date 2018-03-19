@@ -12,8 +12,9 @@ export default class InProgressColumn extends Component {
         // const task = this.props.tasksInProgress[key];
         return (
             <li key={key}>
-                {task.title}
-                {task.description}
+                {task.title}<hr/>
+                {task.description}<hr/>
+                {task.status}
             </li>
         )
     }
@@ -21,7 +22,6 @@ export default class InProgressColumn extends Component {
     render() {
         const tasksIds = Object.keys(this.props.tasksInProgress);
         return (
-            // <div className="cover-in-pro">w trakcie robienia</div>
             <div>
                 <div className="coverIpro">
                     w trakcie robieniam

@@ -35,8 +35,12 @@ export default class App extends Component {
 	render() {
 		return (
 			<div className="appCover">
-				<ToDoColumn addTask={this.addTask} newTasksList={this.newTasksList} />
-				<InProgressColumn newTasksList={this.state.newTasksList} tasksInProgress={this.state.tasksInProgress}/>
+				<ToDoColumn newTasksList={this.state.newTasksList}
+							addTask={this.addTask}
+							moveTaskIntoProgress={this.moveTaskIntoProgress}
+				/>
+				<InProgressColumn newTasksList={this.state.newTasksList}
+								  tasksInProgress={this.state.tasksInProgress}/>
 				<DoneColumn />
 				<ul className="tasksUl">
 	             {/*<h2>{this.props.newTasks.status}</h2>*/}

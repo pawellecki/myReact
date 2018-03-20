@@ -28,7 +28,7 @@ export default class App extends Component {
 	}
     moveTaskIntoProgress(key) {
 		const tasksInProgress = {...this.state.tasksInProgress};
-        tasksInProgress[key] = tasksInProgress[key] + 1 || 1;
+        tasksInProgress[key] = 1
 		this.setState({ tasksInProgress })
 	}
 
@@ -36,22 +36,12 @@ export default class App extends Component {
 		return (
 			<div className="appCover">
 				<ToDoColumn newTasksList={this.state.newTasksList}
-							addTask={this.addTask}
-							moveTaskIntoProgress={this.moveTaskIntoProgress}
+					addTask={this.addTask}
+					moveTaskIntoProgress={this.moveTaskIntoProgress}
 				/>
 				<InProgressColumn newTasksList={this.state.newTasksList}
-								  tasksInProgress={this.state.tasksInProgress}/>
+					tasksInProgress={this.state.tasksInProgress}/>
 				<DoneColumn />
-				<ul className="tasksUl">
-	             {/*<h2>{this.props.newTasks.status}</h2>*/}
-	 		 		{
-	              		Object
-							.keys(this.state.newTasksList)
-							.map(key => <Task key={key} index={key}
-								details={this.state.newTasksList[key]}
-								moveTaskIntoProgress={this.moveTaskIntoProgress}/>)
-	         		}
-      			</ul>
 			</div>
 		);
 	}

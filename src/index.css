@@ -30,6 +30,8 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 body {
+  font-size: 10px;
+  color: #1c0d45;
   line-height: 1;
   font-family: 'Nunito', cursive;
 }
@@ -49,3 +51,117 @@ table {
   border-spacing: 0;
 }
 
+h2 {
+  font-size: 1.8em;
+  color: #3700c4;
+  margin-bottom: 12px;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+h4 {
+  font-size: 1.3em;
+  opacity: .8;
+}
+button {
+  float: right;
+  height: 30px;
+  min-width: 30px;
+  margin-right: 10px;
+  padding: 0;
+  background: #fff;
+  border: 2px solid #3700c4;
+  border-radius: 19px;
+  font-family: 'Nunito', cursive;
+  font-size: 1.6em;
+  color: #3700c4;
+  line-height: 22px;
+  transition: .5s;
+  outline: none;
+  cursor: pointer;
+}
+button:hover {
+  background: #3700c4;
+  color: #fff;
+  transition: .5s;
+}
+button.remove-task {
+  border: 2px solid red;
+  color: red;
+}
+button.remove-task:hover {
+  background: red;
+  color: #fff;
+}
+select {
+  font-family: fontAwesome;
+}
+select option {
+  font-family: fontAwesome;
+}
+
+.column-cover {
+  float: left;
+  width: 300px;
+  min-height: 90vh;
+  margin: 0 10px;
+  padding: 12px;
+  background: #fff;
+  -webkit-box-shadow: 2px 5px 26px -9px rgba(0,0,56,1);
+  -moz-box-shadow: 2px 5px 26px -9px rgba(0,0,56,1);
+  box-shadow: 2px 5px 26px -9px rgba(0,0,56,1);
+  border: 3px solid #f1ebff;
+  border-radius: 10px;
+}
+.column-title {
+  text-align: center;
+  color: #89819d;
+}
+.add-task-form {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: grey;
+  border-bottom: 2px solid #f1ebff;
+}
+.add-task-form input {
+
+}
+.add-task-form textarea {
+
+}
+.add-task-form select {
+}
+.add-task-form::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.taskLi {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #fff;
+  border-bottom: 1px solid #f1ebff;
+}
+.taskLi::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.taskLi .task-title {
+
+}
+.taskLi .task-description {
+  max-height: 40px;
+  overflow: auto;
+}
+.taskLi .task-status {
+  float: left;
+  line-height: 30px;
+}
+
+.fa-arrow-right:hover {
+  /*color: red;*/
+  /*border: 3px solid red;*/
+}

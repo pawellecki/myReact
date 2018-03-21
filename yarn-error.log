@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js start
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js eject
 
 PATH: 
   /usr/local/php5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -20,6 +20,7 @@ npm manifest:
     "private": true,
     "dependencies": {
       "css-loader": "^0.28.11",
+      "font-awesome": "^4.7.0",
       "prop-types": "^15.6.1",
       "react": "^16.2.0",
       "react-dom": "^16.2.0",
@@ -31,7 +32,7 @@ npm manifest:
       "start": "react-scripts start",
       "build": "react-scripts build",
       "test": "react-scripts test --env=jsdom",
-      "eject": "react-scripts eject"  
+      "eject": "react-scripts eject"
     }
   }
 
@@ -6789,7 +6790,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c react-scripts start
+  Arguments: -c react-scripts eject
   Directory: /Users/pawel/Documents/projekty/myReact
   Output:
   

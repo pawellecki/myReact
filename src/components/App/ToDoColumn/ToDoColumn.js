@@ -15,6 +15,7 @@ export default class ToDoColumn extends Component {
                         tasksIds
                             .map(key => <Task key={key} index={key}
                                 details={this.props.newTasksList[key]}
+                                removeTask={this.props.removeTask}
                                 moveTaskIntoProgress={this.props.moveTaskIntoProgress}
                             />)
                     }
@@ -25,8 +26,6 @@ export default class ToDoColumn extends Component {
                         <h4>wazne</h4>
                     </li>
                 </ul>
-                <button><i className="fa fa-arrow-right"></i></button>
-                <button className="remove-task"><i className="fa fa-times"></i></button>
             </div>
         );
     }

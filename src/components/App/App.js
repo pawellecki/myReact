@@ -11,6 +11,7 @@ export default class App extends Component {
 
 		this.addTask = this.addTask.bind(this);
 		this.moveTaskIntoProgress = this.moveTaskIntoProgress.bind(this);
+		this.removeTask = this.removeTask.bind(this);
 
 		this.state = {
 			newTasksList: {},
@@ -26,21 +27,49 @@ export default class App extends Component {
 		this.setState({ newTasksList })
 
 	}
+
+
+    removeTask(key) {
+        // const newTasksList = {...this.state.newTasksList};
+        // const filtered = [newTasksList].filter(el => el !== key);
+        // console.log(key)
+        // this.setState({
+			// newTasksList: filtered
+        // })
+				// : this.state.newTasksList.filter(el => el !== key)
+        // })
+        // this.setState({
+        //     newTasksList: this.state.newTasksList.filter(function(person) {
+        //     	return person !== key})
+        // })
+        // const newTasksList = [{...this.state.newTasksList;
+        // this.setState({
+        //     newTasksList: newTasksList.filter(key => key !== key)
+        // })
+
+	}
+
+
     moveTaskIntoProgress(key) {
 		const tasksInProgress = {...this.state.tasksInProgress};
-        tasksInProgress[key] = 1
+        tasksInProgress[key] = 1;
 		this.setState({ tasksInProgress })
 	}
 
 	render() {
 		return (
 			<div className="appCover">
-				<ToDoColumn newTasksList={this.state.newTasksList}
+				<ToDoColumn
+					newTasksList={this.state.newTasksList}
 					addTask={this.addTask}
+					removeTask={this.removeTask}
 					moveTaskIntoProgress={this.moveTaskIntoProgress}
 				/>
-				<InProgressColumn newTasksList={this.state.newTasksList}
-					tasksInProgress={this.state.tasksInProgress}/>
+				<InProgressColumn
+					newTasksList={this.state.newTasksList}
+					tasksInProgress={this.state.tasksInProgress}
+					removeTask={this.removeTask}
+				/>
 				<DoneColumn />
 			</div>
 		);

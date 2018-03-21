@@ -9,12 +9,16 @@ export default class InProgressColumn extends Component {
 
     renderInProgressList(key) {
         const task = this.props.newTasksList[key];
-        // const task = this.props.tasksInProgress[key];
         return (
             <li className="taskLi" key={key}>
                 <h2 className="task-title">{task.title}</h2>
                 <h3 className="task-description">{task.description}</h3>
-                <h4 className="task-status">{task.status}</h4>
+                <h4 className="task-status"><i className={task.status}></i></h4>
+                <div className="task-buttons-cover">
+                    <button className="move-task" ><i className="fa fa-arrow-right"></i></button>
+                    <button className="remove-task" onClick={() => this.props.removeTask(key)}><i className="fa fa-times"></i></button>
+                    <button className="move-back-task"><i className="fa fa-arrow-left"></i></button>
+                </div>
             </li>
         )
     }

@@ -28,13 +28,45 @@ export default class App extends Component {
 
 	}
 
+	componentDidUpdate(nextProps, nextState) {
+
+	}
 
     removeTask(key) {
-        // const newTasksList = {...this.state.newTasksList};
+        const newTasksList = {...this.state.newTasksList};
+        const tasksInProgress = {...this.state.tasksInProgress};
+        console.log("aaaaaaa")
+        console.log(newTasksList)
+        console.log(tasksInProgress)
+        console.log("bbb")
+        console.log("ccccccc")
+
+		// const kk = Object.keys(newTasksList).filter((_, i) => i !== key)
+        // console.log(kk)
+        // console.log(Object.keys(newTasksList))
+        // const filteredTasksList = Object.keys(newTasksList).filter((_, i) => i !== key);
+        // console.log(filteredTasksList)
+        // delete newTasksList[key]
+        // this.setState({ newTasksList })
+        //
+        // const tasksInProgress = {...this.state.tasksInProgress};
+        // delete tasksInProgress[key]
+        // this.setState({ tasksInProgress })
+
+
+            this.setState({
+                // newTasksList: tasksInProgress
+            });
+
+
         // const filtered = [newTasksList].filter(el => el !== key);
         // console.log(key)
         // this.setState({
-			// newTasksList: filtered
+			// newTasksList: this.state.newTasksList.filter(el => el !== (newTasksList[`task-${key}))
+        // })
+
+        // this.setState({
+			// newTasksList: [...this.state.newTasksList].filter(el => el !== key)
         // })
 				// : this.state.newTasksList.filter(el => el !== key)
         // })
@@ -51,6 +83,8 @@ export default class App extends Component {
 
 
     moveTaskIntoProgress(key) {
+		console.log(key)
+        const newTasksList = {...this.state.newTasksList};
 		const tasksInProgress = {...this.state.tasksInProgress};
         tasksInProgress[key] = 1;
 		this.setState({ tasksInProgress })

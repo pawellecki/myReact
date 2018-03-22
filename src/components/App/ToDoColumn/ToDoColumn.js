@@ -5,14 +5,14 @@ import Task from '../Task/Task';
 
 export default class ToDoColumn extends Component {
     render() {
-        const tasksIds = Object.keys(this.props.newTasksList);
+        const tasksKeys = Object.keys(this.props.newTasksList);
         return (
             <div className="column-cover">
                 <h2 className="column-title">Planowane</h2>
                 <AddTaskForm addTask={this.props.addTask}/>
                 <ul className="tasksUl">
                     {
-                        tasksIds
+                        tasksKeys
                             .map(key => <Task key={key} index={key}
                                 details={this.props.newTasksList[key]}
                                 removeTask={this.props.removeTask}

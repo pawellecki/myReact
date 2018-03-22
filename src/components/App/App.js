@@ -27,9 +27,12 @@ export default class App extends Component {
 		this.setState({ newTasksList })
 
 	}
-
-	componentDidUpdate(nextProps, nextState) {
-
+	copyTask(copiedTask) {
+		console.log(copiedTask)
+        const tasksInProgress = {...this.state.tasksInProgress};
+        // console.log(tasksInProgress)
+        // tasksInProgress.push(copiedTask);
+        this.setState({ tasksInProgress })
 	}
 
     removeTask(key) {
@@ -95,13 +98,16 @@ export default class App extends Component {
 			<div className="appCover">
 				<ToDoColumn
 					newTasksList={this.state.newTasksList}
+					tasksInProgress={this.state.tasksInProgress}
 					addTask={this.addTask}
 					removeTask={this.removeTask}
+					copyTask={this.copyTask}
 					moveTaskIntoProgress={this.moveTaskIntoProgress}
 				/>
 				<InProgressColumn
 					newTasksList={this.state.newTasksList}
 					tasksInProgress={this.state.tasksInProgress}
+
 					removeTask={this.removeTask}
 				/>
 				<DoneColumn />

@@ -4,6 +4,16 @@ import AddTaskForm from './AddTaskForm/AddTaskForm';
 import Task from '../Task/Task';
 
 export default class ToDoColumn extends Component {
+
+    // copyTask(event) {
+    //     const copiedTask = {
+    //         title: this.title.value,
+    //         description: this.description.value,
+    //         status: this.status.value
+    //     }
+    //     this.props.copyTask(copiedTask);
+    // }
+
     render() {
         const tasksKeys = Object.keys(this.props.newTasksList);
         return (
@@ -16,6 +26,7 @@ export default class ToDoColumn extends Component {
                             .map(key => <Task key={key} index={key}
                                 details={this.props.newTasksList[key]}
                                 removeTask={this.props.removeTask}
+                                copyTask={this.props.copyTask}
                                 moveTaskIntoProgress={this.props.moveTaskIntoProgress}
                             />)
                     }

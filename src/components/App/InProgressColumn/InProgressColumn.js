@@ -7,6 +7,7 @@ export default class InProgressColumn extends Component {
         this.renderInProgressList = this.renderInProgressList.bind(this);
     }
 
+
     renderInProgressList(key) {
         const task = this.props.newTasksList[key];
         return (

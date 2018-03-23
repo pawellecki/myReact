@@ -14,11 +14,25 @@ export default class App extends Component {
 		this.removeTask = this.removeTask.bind(this);
 
 		this.state = {
-			newTasksList: {},
-			tasksInProgress: {},
-			tasksDone: {}
-		}
+            newTasksList: {},
+            tasksInProgress: {},
+            tasksDone: {}
+        }
+
 	}
+	// componentWillMount() {
+		// const localStorageRef = localStorage.getItem(`tasksInProgress-${this.props.match.params.listId}`)
+		// if(localStorageRef) {
+		// 	this.setState({
+         //        tasksInProgress: JSON.parse(localStorageRef)
+		// 	});
+		// }
+	// }
+
+	// componentWillUpdate(nextProps, nextState) {
+		// console.log({nextProps, nextState})
+	// 	localStorage.setItem(`newTasksList-${this.props.match.params.listId}`, JSON.stringify(nextState.newTasksList))
+	// }
 
 	addTask(task) {
 		const newTasksList = {...this.state.newTasksList};
@@ -27,70 +41,22 @@ export default class App extends Component {
 		this.setState({ newTasksList })
 
 	}
-	copyTask(copiedTask) {
-		console.log(copiedTask)
-        const tasksInProgress = {...this.state.tasksInProgress};
-        // console.log(tasksInProgress)
-        // tasksInProgress.push(copiedTask);
-        this.setState({ tasksInProgress })
-	}
 
     removeTask(key) {
         const newTasksList = {...this.state.newTasksList};
-        const tasksInProgress = {...this.state.tasksInProgress};
-        console.log("aaaaaaa")
-        console.log(newTasksList)
-        console.log(tasksInProgress)
-        console.log("bbb")
-        console.log("ccccccc")
-
-		// const kk = Object.keys(newTasksList).filter((_, i) => i !== key)
-        // console.log(kk)
-        // console.log(Object.keys(newTasksList))
-        // const filteredTasksList = Object.keys(newTasksList).filter((_, i) => i !== key);
-        // console.log(filteredTasksList)
-        // delete newTasksList[key]
-        // this.setState({ newTasksList })
-        //
         // const tasksInProgress = {...this.state.tasksInProgress};
-        // delete tasksInProgress[key]
-        // this.setState({ tasksInProgress })
-
-
-            this.setState({
-                // newTasksList: tasksInProgress
-            });
-
-
-        // const filtered = [newTasksList].filter(el => el !== key);
-        // console.log(key)
-        // this.setState({
-			// newTasksList: this.state.newTasksList.filter(el => el !== (newTasksList[`task-${key}))
-        // })
-
-        // this.setState({
-			// newTasksList: [...this.state.newTasksList].filter(el => el !== key)
-        // })
-				// : this.state.newTasksList.filter(el => el !== key)
-        // })
-        // this.setState({
-        //     newTasksList: this.state.newTasksList.filter(function(person) {
-        //     	return person !== key})
-        // })
-        // const newTasksList = [{...this.state.newTasksList;
-        // this.setState({
-        //     newTasksList: newTasksList.filter(key => key !== key)
-        // })
-
+        delete newTasksList[key];
+        this.setState({ newTasksList })
 	}
-
 
     moveTaskIntoProgress(key) {
 		console.log(key)
-        const newTasksList = {...this.state.newTasksList};
-		const tasksInProgress = {...this.state.tasksInProgress};
+        const newTasksList = [...this.state.newTasksList];
+        newTasksList.filter((_, i) => i !== key);
+		const tasksInProgress = [...this.state.tasksInProgress];
+
         tasksInProgress[key] = 1;
-		this.setState({ tasksInProgress })
+		this.setState({ tasksInProgress, newTasksList })
 	}
 
 	render() {
@@ -98,17 +64,16 @@ export default class App extends Component {
 			<div className="appCover">
 				<ToDoColumn
 					newTasksList={this.state.newTasksList}
-					tasksInProgress={this.state.tasksInProgress}
+					params={this.props.match.params}
 					addTask={this.addTask}
 					removeTask={this.removeTask}
-					copyTask={this.copyTask}
 					moveTaskIntoProgress={this.moveTaskIntoProgress}
 				/>
 				<InProgressColumn
 					newTasksList={this.state.newTasksList}
 					tasksInProgress={this.state.tasksInProgress}
-
-					removeTask={this.removeTask}
+					params={this.props.match.params}
+                    removeTask={this.removeTask}
 				/>
 				<DoneColumn />
 			</div>

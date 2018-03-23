@@ -17,12 +17,6 @@ export default class ToDoColumn extends Component {
                                 removeTask={this.props.removeTask}
                                 />)
                     }
-                    <li className="taskLi">
-                        <h2>przykladowy tytul taska</h2>
-                        <h3>opis mojego taska czyli wiecej szczegolow poprosze
-                            by wiedziec o co sie rozchodzid</h3>
-                        <h4>wazne</h4>
-                    </li>
                 </ul>
             </div>
         );

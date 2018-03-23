@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styles from './CreateList.css';
 
 export default class CreateList extends Component {
 
@@ -16,7 +15,7 @@ export default class CreateList extends Component {
 
     render() {
         return (
-            <form className={styles.listName} onSubmit={this.createList}>
+            <form onSubmit={this.createList}>
                 <h2>Podaj nazwę nowej listy</h2>
                 <input type="text" required placeholder="My album name"
                        ref={(input) => { this.newListName = input }}/>

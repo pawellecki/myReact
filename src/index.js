@@ -5,7 +5,6 @@ import './index.css';
 import App from './components/App/App';
 import CreateList from './components/CreateList/CreateList';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
-import registerServiceWorker from './registerServiceWorker';
 
 
 const Root = () => {
@@ -20,4 +19,3 @@ const Root = () => {
 }
 
 render(<Root />, document.getElementById('root'));
-registerServiceWorker();

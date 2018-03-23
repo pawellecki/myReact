@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styles from './addTaskForm.css';
 
 export default class AddTaskForm extends Component {
 	createTask(event) {

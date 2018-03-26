@@ -15,10 +15,11 @@ export default class CreateList extends Component {
 
     render() {
         return (
-            <form onSubmit={this.createList}>
+            <form className="create-list-form" onSubmit={this.createList}>
                 <h2>Podaj nazwę nowej listy</h2>
-                <input type="text" required placeholder="My album name"
+                <input type="text" required placeholder="nazwa..."  id="create-list-form"
                        ref={(input) => { this.newListName = input }}/>
+                <label for="create-list-form"></label>
                 <button type="submit">Utwórz listę</button>
             </form>
         );

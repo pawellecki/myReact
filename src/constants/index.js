@@ -1,1 +1,1 @@
-export const EVENTS_CLEAR = 'EVENTS_CLEAR';
+export const TEST_EVENT = 'TEST_EVENT';

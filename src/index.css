@@ -29,6 +29,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
+input, textarea, button, select {
+  outline: none;
+}
 body {
   font-size: 10px;
   color: #1c0d45;
@@ -37,18 +40,6 @@ body {
 }
 ol, ul {
   list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }
 
 h2 {
@@ -79,7 +70,6 @@ button {
   color: #3700c4;
   line-height: 22px;
   transition: .5s;
-  outline: none;
   cursor: pointer;
 }
 button:hover {
@@ -129,19 +119,88 @@ select option {
   text-align: center;
   color: #89819d;
 }
+
+.create-list-form {
+  width: 300px;
+  display: flex;
+  margin: 40px auto;
+  padding: 40px;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-box-shadow: 2px 5px 26px -9px rgba(0,0,56,1);
+  -moz-box-shadow: 2px 5px 26px -9px rgba(0,0,56,1);
+  box-shadow: 2px 5px 26px -9px rgba(0,0,56,1);
+  border: 3px solid #f1ebff;
+  border-radius: 10px;
+}
+.create-list-form h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.create-list-form input {
+  border: none;
+  font-size: 1.6em;
+}
+.create-list-form input:focus + label{
+  border-bottom: 2px solid #0348FF;
+}
+.create-list-form label{
+  border-bottom: 2px solid lightgray;
+  margin-bottom: 40px;
+}
+.create-list-form button {
+  margin-right: 10px;
+}
+
 .add-task-form {
-  margin-bottom: 10px;
-  padding: 10px;
-  background: grey;
-  border-bottom: 2px solid #f1ebff;
+  padding: 15px;
+  border: 2px solid #f1ebff;
+  border-radius: 8px;
 }
 .add-task-form input {
-
+  width: calc(100% - 2px);
+  margin-bottom: 10px;
+  font-size: 1.6em;
+  border: none;
+  border-bottom: 2px solid lightgray;
+}
+.add-task-form input:focus {
+  border-bottom: 2px solid #0348FF;
 }
 .add-task-form textarea {
-
+  width: calc(100% - 6px);
+  margin: 10px 0;
+  resize: none;
+  font-size: 1.6em;
+}
+.add-task-form textarea:focus {
+  margin: 10px 0;
+  resize: none;
+  font-size: 1.6em;
+  border: 1px solid #0348FF;
 }
 .add-task-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  font-size: 1.4em;
+  font-family: 'FontAwesome', 'Nunito', cursive;
+  cursor: pointer;
+}
+.add-task-form .fa-caret-down {
+  position: relative;
+  left: -10px;
+  font-size: 1.4em;
+}
+.add-task-form button {
+  position: relative;
+  top: -20px;
+  height: 30px;
+  padding: 0 20px;
 }
 .add-task-form::after {
   clear: both;
@@ -151,7 +210,7 @@ select option {
 .task-ul {
 }
 .tasks-li {
-  margin-bottom: 10px;
+  margin: 5px;
   padding: 10px;
   background: #fff;
   border-bottom: 1px solid #f1ebff;
@@ -170,7 +229,9 @@ select option {
 
 }
 .tasks-li .task-description {
+  min-height: 20px;
   max-height: 40px;
+  padding-right: 15px;
   overflow: auto;
 }
 .tasks-li .task-status {
@@ -201,9 +262,9 @@ select option {
   transition: .2s;
 }
 
-button.move-task {
-  overflow: hidden;
-}
+/*button.move-task {*/
+  /*overflow: hidden;*/
+/*}*/
 /*button.move-task .fa-arrow-right {*/
   /*position: relative;*/
 /*}*/

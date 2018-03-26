@@ -4,7 +4,6 @@ import Task from '../Task/Task';
 
 export default class ToDoColumn extends Component {
     render() {
-        // const tasksKeys = Object.keys(this.props.newTasksList);
         const tasksKeys = Object.keys(this.props.newTasksList);
         return (
             <div className="column-cover">

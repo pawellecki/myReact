@@ -1,7 +1,7 @@
 import * as constants from '../constants';
 
-export function clearEvents() {
+export function testEvent() {
     return {
-      type: constants.EVENTS_CLEAR
+      type: constants.TEST_EVENT
     };
 }

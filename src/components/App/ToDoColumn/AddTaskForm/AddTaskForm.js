@@ -14,16 +14,20 @@ export default class AddTaskForm extends Component {
 
   render() {
     return (
-      <form className="add-task-form" ref={(input) => this.taskForm = input} onSubmit={(e) => this.createTask(e)}>
-      	<input ref={(input) => this.title = input} type="text" placeholder="tytuł zadania" />
-      	<textarea ref={(input) => this.description = input} type="text" placeholder="opis zadania" />
+      <form className="add-task-form" ref={(input) => this.taskForm = input} onSubmit={(e) => this.createTask(e)} id="add-task-form">
+      	<input ref={(input) => this.title = input} required type="text" placeholder="tytuł zadania" />
+		<label for="add-task-form"></label>
+      	<textarea ref={(input) => this.description = input} required type="text" placeholder="opis zadania" />
+		<h3>Ważność:</h3>
+          <i className="fa fa-caret-down"></i>
+		  {/*<i className="fa fa-caret-down"></i>*/}
       	<select ref={(input) => this.status = input}>
       		<option value="fa fa-thermometer-full">priorytet</option>
       		<option value="fa fa-thermometer-three-quarters">ważne</option>
 			<option value="fa fa-thermometer-half">może poczekać</option>
 			<option value="fa fa-thermometer-empty">przy okazji</option>
       	</select>
-      	<button type="submit">dodaj zadanie</button>
+      	<button type="submit">Dodaj </button>
       </form>
     );
   }

@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import ToDoColumn from './ToDoColumn/ToDoColumn';
+import { connect } from 'react-redux';
 
-export default class App extends Component {
+class App extends Component {
 	constructor() {
 		super();
 
@@ -53,3 +54,13 @@ export default class App extends Component {
 		);
 	}
 }
+
+const mapStateToProps = (state) => {
+	return { ...state }
+}
+
+const mapDispatchToProps = (dispatch) => {
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

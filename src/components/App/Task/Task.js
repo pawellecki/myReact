@@ -9,7 +9,6 @@ export default class Task extends Component {
                 <h3 className="task-description">{details.description}</h3>
                 <h4 className="task-status"><i className={details.status}></i></h4>
                 <div className="task-buttons-cover">
-                    {/*<button className="move-task" onClick={() => this.props.moveTaskIntoProgress(index)}><i className="fa fa-arrow-right"></i></button>*/}
                     <button className="remove-task" onClick={() => this.props.removeTask(index)}><i className="fa fa-times"></i></button>
                 </div>
             </li>

@@ -7,7 +7,7 @@ export default class ToDoColumn extends Component {
         const tasksKeys = Object.keys(this.props.newTasksList);
         return (
             <div className="column-cover">
-                <h2 className="column-title">Planowane</h2>
+                <h2 className="column-title">Lista zadań</h2>
                 <AddTaskForm addTask={this.props.addTask}/>
                 <ul className="tasks-ul">
                     {

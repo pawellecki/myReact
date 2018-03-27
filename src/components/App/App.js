@@ -36,7 +36,6 @@ class App extends Component {
 
     removeTask(key) {
         const newTasksList = {...this.state.newTasksList};
-        // const tasksInProgress = {...this.state.tasksInProgress};
         delete newTasksList[key];
         this.setState({ newTasksList })
 	}
@@ -46,7 +45,6 @@ class App extends Component {
 			<div className="app-cover">
 				<ToDoColumn
 					newTasksList={this.state.newTasksList}
-					// params={this.props.match.params}
 					addTask={this.addTask}
 					removeTask={this.removeTask}
 				/>
@@ -56,11 +54,13 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-	return { ...state }
-}
+	return { ...state };
+};
 
 const mapDispatchToProps = (dispatch) => {
-
-}
+    return {
+    	// testEvent: () => dispatch(actions.testEvent())
+	};
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -20,7 +20,6 @@ export default class AddTaskForm extends Component {
       	<textarea ref={(input) => this.description = input} required type="text" placeholder="opis zadania" />
 		<h3>Ważność:</h3>
           <i className="fa fa-caret-down"></i>
-		  {/*<i className="fa fa-caret-down"></i>*/}
       	<select ref={(input) => this.status = input}>
       		<option value="fa fa-thermometer-full">priorytet</option>
       		<option value="fa fa-thermometer-three-quarters">ważne</option>

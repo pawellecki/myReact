@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import AddTaskForm from './AddTaskForm/AddTaskForm';
 import Task from '../Task/Task';
+import AddTaskForm from './AddTaskForm/AddTaskForm';
 
 export default class ToDoColumn extends Component {
     render() {

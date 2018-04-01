@@ -1,0 +1,7 @@
+import React from 'react';
+
+const NotFound = () => {
+    <h2>dsss</h2>
+};
+
+export default NotFound;
